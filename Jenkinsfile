@@ -64,6 +64,7 @@ podTemplate(
                 curl -kLo helm.tgz https://10.10.1.10:8443/api/cli/helm-linux-amd64.tar.gz
                 tar -xzf helm.tgz
 
+                ./linux-amd64/helm init --client-only
                 chmod a+x cloudctl
                 ./cloudctl login -a https://10.10.1.10:8443 -u \${DOCKER_USER} -p \${DOCKER_PASSWORD} -n default
 
